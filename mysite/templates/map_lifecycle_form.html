@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mapeamento do Ciclo de Vida da Informação</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+</head>
+<body>
+    <h1>Mapeamento do Ciclo de Vida da Informação nas Organizações</h1>
+    <form action="/submit_lifecycle" method="POST">
+
+        <!-- Seção 1: Identificação da Organização -->
+        <h2>Seção 1: Identificação da Organização</h2>
+        <label for="organization_name">Nome da Organização:</label>
+        <input type="text" id="organization_name" name="organization_name" required><br>
+
+        <label for="department">Departamento/Área:</label>
+        <input type="text" id="department" name="department" required><br>
+
+        <label for="responsible">Responsável pelo Preenchimento:</label>
+        <input type="text" id="responsible" name="responsible" required><br>
+
+        <label for="date">Data:</label>
+        <input type="date" id="date" name="date" required><br>
+
+        <!-- Seção 2: Identificação dos Tipos de Informação -->
+        <h2>Seção 2: Identificação dos Tipos de Informação</h2>
+        <p>Identifiquem e descrevam os diferentes tipos de informação usados na organização escolhida.</p>
+
+        <label for="operational_info">Informação Operacional:</label>
+        <textarea id="operational_info" name="operational_info" placeholder="Ex.: Registros de transações, controle de estoque"></textarea><br>
+
+        <label for="tactical_info">Informação Tática:</label>
+        <textarea id="tactical_info" name="tactical_info" placeholder="Ex.: Relatórios de desempenho, análises de mercado"></textarea><br>
+
+        <label for="strategic_info">Informação Estratégica:</label>
+        <textarea id="strategic_info" name="strategic_info" placeholder="Ex.: Planejamento de longo prazo, análise SWOT"></textarea><br>
+
+        <label for="compliance_info">Informação de Conformidade:</label>
+        <textarea id="compliance_info" name="compliance_info" placeholder="Ex.: Relatórios de conformidade legal, documentos fiscais"></textarea><br>
+
+        <label for="knowledge_info">Informação de Conhecimento:</label>
+        <textarea id="knowledge_info" name="knowledge_info" placeholder="Ex.: Procedimentos internos, manuais de treinamento"></textarea><br>
+
+        <label for="managerial_info">Informação Gerencial:</label>
+        <textarea id="managerial_info" name="managerial_info" placeholder="Ex.: Dashboards de KPIs, relatórios financeiros"></textarea><br>
+
+        <!-- Seção 3: Mapeamento do Ciclo de Vida da Informação -->
+        <h2>Seção 3: Mapeamento do Ciclo de Vida da Informação</h2>
+        <p>Mapeiem cada etapa do ciclo de vida da informação na organização, detalhando conforme descrito abaixo.</p>
+
+        <!-- Criação -->
+        <h3>Criação</h3>
+        <label for="creation_process">Como a informação é gerada?</label>
+        <textarea id="creation_process" name="creation_process"></textarea><br>
+
+        <!-- Armazenamento -->
+        <h3>Armazenamento</h3>
+        <label for="storage_location">Onde e como a informação é armazenada?</label>
+        <textarea id="storage_location" name="storage_location"></textarea><br>
+
+        <label for="storage_security">Qual a segurança aplicada?</label>
+        <textarea id="storage_security" name="storage_security"></textarea><br>
+
+        <!-- Disseminação/Distribuição -->
+        <h3>Disseminação/Distribuição</h3>
+        <label for="distribution_methods">Como a informação é compartilhada internamente e externamente?</label>
+        <textarea id="distribution_methods" name="distribution_methods"></textarea><br>
+
+        <!-- Uso -->
+        <h3>Uso</h3>
+        <label for="usage_description">Como a informação é utilizada nas operações diárias e na tomada de decisões?</label>
+        <textarea id="usage_description" name="usage_description"></textarea><br>
+
+        <!-- Preservação -->
+        <h3>Preservação</h3>
+        <label for="preservation_practices">Quais práticas são adotadas para garantir a preservação de longo prazo?</label>
+        <textarea id="preservation_practices" name="preservation_practices"></textarea><br>
+
+        <!-- Descarte -->
+        <h3>Descarte</h3>
+        <label for="disposal_methods">Como a informação é descartada quando não é mais necessária?</label>
+        <textarea id="disposal_methods" name="disposal_methods"></textarea><br>
+
+        <!-- Seção 4: Identificação de Desafios e Propostas de Soluções -->
+        <h2>Seção 4: Identificação de Desafios e Propostas de Soluções</h2>
+        <p>Identifique desafios potenciais em cada etapa do ciclo de vida da informação e proponha soluções.</p>
+
+        <!-- Desafio e Solução para Criação -->
+        <h3>Criação</h3>
+        <label for="creation_challenge">Desafio:</label>
+        <textarea id="creation_challenge" name="creation_challenge" placeholder="Ex.: Segurança da informação durante a geração de dados."></textarea><br>
+
+        <label for="creation_solution">Solução Proposta:</label>
+        <textarea id="creation_solution" name="creation_solution" placeholder="Ex.: Implementar controles de acesso rigorosos."></textarea><br>
+
+        <!-- Desafio e Solução para Armazenamento -->
+        <h3>Armazenamento</h3>
+        <label for="storage_challenge">Desafio:</label>
+        <textarea id="storage_challenge" name="storage_challenge" placeholder="Ex.: Risco de perda de dados devido à falha de hardware."></textarea><br>
+
+        <label for="storage_solution">Solução Proposta:</label>
+        <textarea id="storage_solution" name="storage_solution" placeholder="Ex.: Implementar sistemas de backup automatizados."></textarea><br>
+
+        <!-- Desafio e Solução para Disseminação/Distribuição -->
+        <h3>Disseminação/Distribuição</h3>
+        <label for="distribution_challenge">Desafio:</label>
+        <textarea id="distribution_challenge" name="distribution_challenge" placeholder="Ex.: Segurança da informação durante a disseminação."></textarea><br>
+
+        <label for="distribution_solution">Solução Proposta:</label>
+        <textarea id="distribution_solution" name="distribution_solution" placeholder="Ex.: Implementar criptografia de ponta a ponta."></textarea><br>
+
+        <!-- Desafio e Solução para Uso -->
+        <h3>Uso</h3>
+        <label for="usage_challenge">Desafio:</label>
+        <textarea id="usage_challenge" name="usage_challenge" placeholder="Ex.: Garantir a integridade da informação durante o uso."></textarea><br>
+
+        <label for="usage_solution">Solução Proposta:</label>
+        <textarea id="usage_solution" name="usage_solution" placeholder="Ex.: Implementar sistemas de controle de versão."></textarea><br>
+
+        <!-- Desafio e Solução para Preservação -->
+        <h3>Preservação</h3>
+        <label for="preservation_challenge">Desafio:</label>
+        <textarea id="preservation_challenge" name="preservation_challenge" placeholder="Ex.: Obsolescência de mídias de armazenamento."></textarea><br>
+
+        <label for="preservation_solution">Solução Proposta:</label>
+        <textarea id="preservation_solution" name="preservation_solution" placeholder="Ex.: Migração periódica de dados para novas tecnologias."></textarea><br>
+
+        <!-- Desafio e Solução para Descarte -->
+        <h3>Descarte</h3>
+        <label for="disposal_challenge">Desafio:</label>
+        <textarea id="disposal_challenge" name="disposal_challenge" placeholder="Ex.: Exposição de dados sensíveis durante o descarte."></textarea><br>
+
+        <label for="disposal_solution">Solução Proposta:</label>
+        <textarea id="disposal_solution" name="disposal_solution" placeholder="Ex.: Utilização de métodos de destruição segura de dados."></textarea><br>
+
+        <button type="submit">Enviar</button>
+    </form>
+
+    <script src="{{ url_for('static', filename='js/script.js') }}"></script>
+</body>
+</html>
+

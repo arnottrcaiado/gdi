@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulário de Informações</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+</head>
+<body>
+    <h1>Formulário para Mapear Tipos de Informações nas Organizações</h1>
+    <form action="/submit" method="POST">
+        <!-- Seção 1: Identificação da Área -->
+        <h2>Seção 1: Identificação da Área</h2>
+        <label for="organization_name">Nome da Organização:</label>
+        <input type="text" id="organization_name" name="organization_name" required><br>
+
+        <label for="department">Departamento/Área:</label>
+        <input type="text" id="department" name="department" required><br>
+
+        <label for="responsible">Responsável pelo Preenchimento:</label>
+        <input type="text" id="responsible" name="responsible" required><br>
+
+        <label for="date">Data:</label>
+        <input type="date" id="date" name="date" required><br>
+
+        <!-- Seção 2: Tipos de Informação -->
+        <h2>Seção 2: Tipos de Informação</h2>
+
+        <!-- Informação Operacional -->
+        <h3>Informação Operacional</h3>
+        <label for="operational_examples">Exemplos:</label>
+        <input type="text" id="operational_examples" name="operational_examples"><br>
+
+        <label for="operational_origin">Origem:</label>
+        <input type="text" id="operational_origin" name="operational_origin"><br>
+
+        <label for="operational_format">Formato:</label>
+        <input type="text" id="operational_format" name="operational_format"><br>
+
+        <label for="operational_storage">Armazenamento:</label>
+        <input type="text" id="operational_storage" name="operational_storage"><br>
+
+        <label for="operational_security">Segurança:</label>
+        <input type="text" id="operational_security" name="operational_security"><br>
+
+        <!-- Informação Tática -->
+        <h3>Informação Tática</h3>
+        <label for="tactical_examples">Exemplos:</label>
+        <input type="text" id="tactical_examples" name="tactical_examples"><br>
+
+        <label for="tactical_origin">Origem:</label>
+        <input type="text" id="tactical_origin" name="tactical_origin"><br>
+
+        <label for="tactical_format">Formato:</label>
+        <input type="text" id="tactical_format" name="tactical_format"><br>
+
+        <label for="tactical_storage">Armazenamento:</label>
+        <input type="text" id="tactical_storage" name="tactical_storage"><br>
+
+        <label for="tactical_security">Segurança:</label>
+        <input type="text" id="tactical_security" name="tactical_security"><br>
+
+        <!-- Informação Estratégica -->
+        <h3>Informação Estratégica</h3>
+        <label for="strategic_examples">Exemplos:</label>
+        <input type="text" id="strategic_examples" name="strategic_examples"><br>
+
+        <label for="strategic_origin">Origem:</label>
+        <input type="text" id="strategic_origin" name="strategic_origin"><br>
+
+        <label for="strategic_format">Formato:</label>
+        <input type="text" id="strategic_format" name="strategic_format"><br>
+
+        <label for="strategic_storage">Armazenamento:</label>
+        <input type="text" id="strategic_storage" name="strategic_storage"><br>
+
+        <label for="strategic_security">Segurança:</label>
+        <input type="text" id="strategic_security" name="strategic_security"><br>
+
+        <!-- Informação de Conformidade -->
+        <h3>Informação de Conformidade</h3>
+        <label for="compliance_examples">Exemplos:</label>
+        <input type="text" id="compliance_examples" name="compliance_examples"><br>
+
+        <label for="compliance_origin">Origem:</label>
+        <input type="text" id="compliance_origin" name="compliance_origin"><br>
+
+        <label for="compliance_format">Formato:</label>
+        <input type="text" id="compliance_format" name="compliance_format"><br>
+
+        <label for="compliance_storage">Armazenamento:</label>
+        <input type="text" id="compliance_storage" name="compliance_storage"><br>
+
+        <label for="compliance_security">Segurança:</label>
+        <input type="text" id="compliance_security" name="compliance_security"><br>
+
+        <!-- Informação de Conhecimento -->
+        <h3>Informação de Conhecimento</h3>
+        <label for="knowledge_examples">Exemplos:</label>
+        <input type="text" id="knowledge_examples" name="knowledge_examples"><br>
+
+        <label for="knowledge_origin">Origem:</label>
+        <input type="text" id="knowledge_origin" name="knowledge_origin"><br>
+
+        <label for="knowledge_format">Formato:</label>
+        <input type="text" id="knowledge_format" name="knowledge_format"><br>
+
+        <label for="knowledge_storage">Armazenamento:</label>
+        <input type="text" id="knowledge_storage" name="knowledge_storage"><br>
+
+        <label for="knowledge_security">Segurança:</label>
+        <input type="text" id="knowledge_security" name="knowledge_security"><br>
+
+        <!-- Informação Gerencial -->
+        <h3>Informação Gerencial</h3>
+        <label for="managerial_examples">Exemplos:</label>
+        <input type="text" id="managerial_examples" name="managerial_examples"><br>
+
+        <label for="managerial_origin">Origem:</label>
+        <input type="text" id="managerial_origin" name="managerial_origin"><br>
+
+        <label for="managerial_format">Formato:</label>
+        <input type="text" id="managerial_format" name="managerial_format"><br>
+
+        <label for="managerial_storage">Armazenamento:</label>
+        <input type="text" id="managerial_storage" name="managerial_storage"><br>
+
+        <label for="managerial_security">Segurança:</label>
+        <input type="text" id="managerial_security" name="managerial_security"><br>
+
+        <!-- Seção 3: Desafios e Sugestões -->
+        <h2>Seção 3: Desafios e Sugestões</h2>
+        <label for="challenges">Desafios:</label>
+        <textarea id="challenges" name="challenges"></textarea><br>
+
+        <label for="improvements">Sugestões de Melhoria:</label>
+        <textarea id="improvements" name="improvements"></textarea><br>
+
+        <!-- Seção 4: Acompanhamento e Feedback -->
+        <h2>Seção 4: Acompanhamento e Feedback</h2>
+        <label for="review_frequency">Frequência das Revisões:</label>
+        <select id="review_frequency" name="review_frequency">
+            <option value="Mensal">Mensal</option>
+            <option value="Trimestral">Trimestral</option>
+            <option value="Anual">Anual</option>
+            <option value="Outro">Outro</option>
+        </select><br>
+
+        <label for="training_suggestions">Sugestões de Treinamento:</label>
+        <textarea id="training_suggestions" name="training_suggestions"></textarea><br>
+
+        <button type="submit">Enviar</button>
+    </form>
+
+    <script src="{{ url_for('static', filename='js/script.js') }}"></script>
+</body>
+</html>
